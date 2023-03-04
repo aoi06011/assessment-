@@ -41,6 +41,7 @@ tweetDivided.appendChild(anchor);
  tweetDivided.appendChild(script);
 };
 
+
 const answer = [
     '{userName}のいいところは声です。{userName}の特徴的な声は皆を惹きつけ、心に残ります。',
     '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
@@ -90,3 +91,8 @@ console.assert(
     assessment('太郎') === assessment('太郎'),
     '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
   );
+  userNameInput.onkeydown = event => {
+    if (event.key === 'Enter') {
+        assessmentButton.onclick ();
+    }
+  };
